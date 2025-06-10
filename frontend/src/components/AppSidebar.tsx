@@ -16,22 +16,22 @@ import {
 const menuItems = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
     title: "Cart",
-    url: "#cart",
+    url: "cart",
     icon: ShoppingCart,
   },
   {
     title: "Rewards",
-    url: "#rewards",
+    url: "rewards",
     icon: Gift,
   },
   {
     title: "Profile",
-    url: "#profile",
+    url: "profile",
     icon: User,
   },
 ];

@@ -34,9 +34,9 @@ const HeroSection = () => {
               Get Started Free
             </Button>
             <Button 
-              variant="outline" 
+              
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6 rounded-full transition-all duration-300 hover:scale-105"
+              className="bg-white text-blue-600 hover:bg-white/90 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               Watch Demo
             </Button>
