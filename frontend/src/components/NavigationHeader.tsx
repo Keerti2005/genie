@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Leaf, Home, ShoppingCart, Gift, User } from "lucide-react";
+import { Leaf, Home, ShoppingCart, Gift, User,Box } from "lucide-react";
 
 const NavigationHeader = () => {
   return (
@@ -26,6 +26,13 @@ const NavigationHeader = () => {
             >
               <Home className="h-4 w-4" />
               <span>Home</span>
+            </Link>
+            <Link
+              to="/product"
+              className="flex items-center gap-2 text-foreground hover:text-eco-green transition-colors font-medium"
+            >
+              <Box className="h-4 w-4" />
+              <span>Products</span>
             </Link>
             <Link
               to="/cart"

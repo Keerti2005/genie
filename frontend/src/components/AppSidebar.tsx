@@ -1,5 +1,5 @@
 
-import { Home, ShoppingCart, Gift, User, LogOut, Leaf } from "lucide-react";
+import { Home, ShoppingCart, Gift, User, LogOut, Leaf, Box } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -18,12 +18,19 @@ const menuItems = [
     title: "Home",
     url: "/",
     icon: Home,
+    
+  },
+  {
+    title: "Products",
+    url: "product",
+    icon: Box,
   },
   {
     title: "Cart",
     url: "cart",
     icon: ShoppingCart,
   },
+  
   {
     title: "Rewards",
     url: "rewards",
