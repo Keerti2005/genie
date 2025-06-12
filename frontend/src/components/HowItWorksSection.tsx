@@ -42,17 +42,17 @@ const HowItWorksSection = () => {
               <div key={index} className="relative animate-scale-in" style={{animationDelay: `${index * 0.2}s`}}>
                 {/* Connector line for desktop */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-12 -right-6 w-12 h-0.5 bg-gradient-to-r from-eco-green to-primary"></div>
+                  <div className="hidden lg:block absolute top-12 -right-6 w-12 h-0.5 bg-gradient-to-r from-green-600 to-primary"></div>
                 )}
                 
-                <Card className="border-2 border-eco-light hover:border-eco-green transition-all duration-300 hover:shadow-xl bg-white">
+                <Card className="border-2 border-eco-light hover:border-green-600 transition-all duration-300 hover:shadow-xl bg-white">
                   <CardContent className="p-8 text-center">
                     <div className="mb-6 flex justify-center relative">
                       <div className="absolute -top-2 -right-2 bg-gradient-eco text-white text-sm font-bold px-3 py-1 rounded-full">
                         {step.step}
                       </div>
                       <div className="p-6 bg-eco-light rounded-full">
-                        <step.icon className="h-10 w-10 text-eco-green" />
+                        <step.icon className="h-10 w-10 text-green-600" />
                       </div>
                     </div>
                     <h3 className="text-2xl font-semibold mb-4 text-foreground">
@@ -70,8 +70,8 @@ const HowItWorksSection = () => {
 
         <div className="text-center mt-16">
           <div className="inline-flex items-center gap-2 bg-eco-light px-6 py-3 rounded-full">
-            <Leaf className="h-5 w-5 text-eco-green" />
-            <span className="text-eco-green font-semibold">Average user earns 50+ Green Points per week</span>
+            <Leaf className="h-5 w-5 text-green-600" />
+            <span className="text-green-600 font-semibold">Average user earns 50+ Green Points per week</span>
           </div>
         </div>
       </div>

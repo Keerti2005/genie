@@ -49,7 +49,7 @@ const FeaturesSection = () => {
               <CardContent className="p-8 text-center">
                 <div className="mb-6 flex justify-center">
                   <div className="p-4 bg-eco-light rounded-full">
-                    <feature.icon className="h-8 w-8 text-eco-green" />
+                    <feature.icon className="h-8 w-8 text-green-600" />
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">

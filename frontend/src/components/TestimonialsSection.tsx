@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
                 <div className="flex items-center gap-4 mb-4">
                   <Avatar className="h-12 w-12">
                     <AvatarImage src="" />
-                    <AvatarFallback className="bg-eco-green text-white font-semibold">
+                    <AvatarFallback className="bg-green-600 text-white font-semibold">
                       {testimonial.avatar}
                     </AvatarFallback>
                   </Avatar>
@@ -76,8 +76,8 @@ const TestimonialsSection = () => {
                 </div>
                 
                 <div className="flex items-center gap-2 bg-eco-light px-4 py-2 rounded-full">
-                  <Leaf className="h-4 w-4 text-eco-green" />
-                  <span className="text-eco-green font-semibold text-sm">{testimonial.impact}</span>
+                  <Leaf className="h-4 w-4 text-green-600" />
+                  <span className="text-green-600 font-semibold text-sm">{testimonial.impact}</span>
                 </div>
               </CardContent>
             </Card>
@@ -87,15 +87,15 @@ const TestimonialsSection = () => {
         <div className="text-center mt-16">
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-4xl font-bold text-eco-green mb-2">100K+</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">100K+</div>
               <div className="text-muted-foreground">Active Users</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-eco-green mb-2">2M+</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">2M+</div>
               <div className="text-muted-foreground">Eco Products Recommended</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-eco-green mb-2">500K</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">500K</div>
               <div className="text-muted-foreground">Tons of CO2 Saved</div>
             </div>
           </div>

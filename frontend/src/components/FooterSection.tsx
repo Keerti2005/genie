@@ -10,7 +10,7 @@ const FooterSection = () => {
           {/* Logo and description */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="p-2 bg-eco-green rounded-lg">
+              <div className="p-2 bg-green-600 rounded-lg">
                 <Leaf className="h-6 w-6 text-white" />
               </div>
               <span className="text-2xl font-display font-bold">Walmart Genie</span>
@@ -31,22 +31,22 @@ const FooterSection = () => {
             <h3 className="font-semibold mb-4 text-lg">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-white/80 hover:text-eco-green transition-colors">
+                <a href="#" className="text-white/80 hover:text-green-600 transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-eco-green transition-colors">
+                <a href="#" className="text-white/80 hover:text-green-600 transition-colors">
                   How It Works
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-eco-green transition-colors">
+                <a href="#" className="text-white/80 hover:text-green-600 transition-colors">
                   Sustainability
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-eco-green transition-colors">
+                <a href="#" className="text-white/80 hover:text-green-600 transition-colors">
                   Rewards Program
                 </a>
               </li>
@@ -58,22 +58,22 @@ const FooterSection = () => {
             <h3 className="font-semibold mb-4 text-lg">Support</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-white/80 hover:text-eco-green transition-colors">
+                <a href="#" className="text-white/80 hover:text-green-600 transition-colors">
                   Contact Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-eco-green transition-colors">
+                <a href="#" className="text-white/80 hover:text-green-600 transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-eco-green transition-colors">
+                <a href="#" className="text-white/80 hover:text-green-600 transition-colors">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-eco-green transition-colors">
+                <a href="#" className="text-white/80 hover:text-green-600 transition-colors">
                   Help Center
                 </a>
               </li>

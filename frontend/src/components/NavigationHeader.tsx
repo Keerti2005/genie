@@ -10,7 +10,7 @@ const NavigationHeader = () => {
           
           {/* Logo and Title linked to Home */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="p-2 bg-eco-green rounded-lg">
+            <div className="p-2 bg-green-600 rounded-lg">
               <Leaf className="h-6 w-6 text-white" />
             </div>
             <span className="text-2xl font-display font-bold text-foreground">
@@ -22,35 +22,35 @@ const NavigationHeader = () => {
           <nav className="hidden md:flex items-center gap-8">
             <Link
               to="/"
-              className="flex items-center gap-2 text-foreground hover:text-eco-green transition-colors font-medium"
+              className="flex items-center gap-2 text-foreground hover:text-green-600 transition-colors font-medium"
             >
               <Home className="h-4 w-4" />
               <span>Home</span>
             </Link>
             <Link
               to="/product"
-              className="flex items-center gap-2 text-foreground hover:text-eco-green transition-colors font-medium"
+              className="flex items-center gap-2 text-foreground hover:text-green-600 transition-colors font-medium"
             >
               <Box className="h-4 w-4" />
               <span>Products</span>
             </Link>
             <Link
               to="/cart"
-              className="flex items-center gap-2 text-foreground hover:text-eco-green transition-colors font-medium"
+              className="flex items-center gap-2 text-foreground hover:text-green-600 transition-colors font-medium"
             >
               <ShoppingCart className="h-4 w-4" />
               <span>Cart</span>
             </Link>
             <Link
               to="/rewards"
-              className="flex items-center gap-2 text-foreground hover:text-eco-green transition-colors font-medium"
+              className="flex items-center gap-2 text-foreground hover:text-green-600 transition-colors font-medium"
             >
               <Gift className="h-4 w-4" />
               <span>Rewards</span>
             </Link>
             <Link
               to="/profile"
-              className="flex items-center gap-2 text-foreground hover:text-eco-green transition-colors font-medium"
+              className="flex items-center gap-2 text-foreground hover:text-green-600 transition-colors font-medium"
             >
               <User className="h-4 w-4" />
               <span>Profile</span>
@@ -62,7 +62,7 @@ const NavigationHeader = () => {
             <Button variant="ghost" className="hidden sm:inline-flex">
               Login
             </Button>
-            <Button className="bg-eco-green hover:bg-eco-green/90">
+            <Button className="bg-green-600 hover:bg-green-600/90">
               Sign Up
             </Button>
           </div>

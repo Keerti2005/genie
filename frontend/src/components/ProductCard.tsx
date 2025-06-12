@@ -1,3 +1,4 @@
+// src/components/ProductCard.tsx
 
 import React from 'react';
 import { Plus, MessageCircle, Star, Leaf } from 'lucide-react';
@@ -26,24 +27,24 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAskGenie })
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
           </div>
-          
+
           {product.isGreenerChoice && (
-            <Badge className="absolute top-3 left-3 bg-eco-green hover:bg-eco-green-dark text-white shadow-lg">
+            <Badge className="absolute top-3 left-3 bg-green-600 hover:bg-green-700-dark text-white shadow-lg">
               <Leaf className="w-3 h-3 mr-1" />
               Greener Choice
             </Badge>
           )}
-          
-          <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-bold text-eco-green shadow-lg">
+
+          <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-bold text-green-600 shadow-lg">
             Eco: {product.ecoScore}
           </div>
         </div>
 
         <div className="p-5 space-y-3">
-          <h3 className="font-bold text-lg line-clamp-2 cursor-pointer hover:text-eco-green transition-colors group-hover:text-eco-green">
+          <h3 className="font-bold text-lg line-clamp-2 cursor-pointer hover:text-eco-green transition-colors group-hover:text-green-600">
             {product.name}
           </h3>
-          
+
           <div className="flex items-center space-x-1">
             <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
             <span className="text-sm text-muted-foreground font-medium">
@@ -52,7 +53,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAskGenie })
           </div>
 
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-eco-green">
+            <span className="text-2xl font-bold text-green-700">
               ${product.price}
             </span>
             {product.originalPrice && (
@@ -65,20 +66,25 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAskGenie })
           <div className="flex items-center space-x-2 pt-2">
             <Button
               onClick={() => addToCart(product)}
-              className="flex-1 bg-eco-green hover:bg-eco-green-dark text-white font-medium rounded-xl h-11 transition-all shadow-lg hover:shadow-xl"
+              className="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium rounded-xl h-11 transition-all shadow-lg hover:shadow-xl"
               size="sm"
             >
               <Plus className="w-4 h-4 mr-2" />
               Add to Cart
             </Button>
-            
+
+            {/* ✅ Fixed stopPropagation here */}
             <Button
               variant="outline"
               size="sm"
-              onClick={() => onAskGenie(product)}
-              className="px-4 h-11 rounded-xl border-2 border-eco-green/20 hover:border-eco-green hover:bg-eco-green/5 transition-all"
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault(); // Optional: prevents Link navigation
+                onAskGenie(product);
+              }}
+              className="px-4 h-11 rounded-xl border-2 border-green-600/20 hover:border-green-600 hover:bg-green-700/5 transition-all"
             >
-              <MessageCircle className="w-4 h-4 text-eco-green" />
+              <MessageCircle className="w-4 h-4 text-green-600" />
             </Button>
           </div>
         </div>

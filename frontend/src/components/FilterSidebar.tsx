@@ -30,14 +30,14 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFilters
   };
 
   return (
-    <Card className="w-full shadow-lg border-2 border-eco-green/10 bg-card/80 backdrop-blur-sm">
+    <Card className="w-full shadow-lg border-2 border-green-600/10 bg-card/80 backdrop-blur-sm">
       <CardHeader className="bg-eco-gradient-soft rounded-t-lg">
         <div className="flex items-center justify-between">
-          <CardTitle className="flex items-center space-x-2 text-eco-green">
+          <CardTitle className="flex items-center space-x-2 text-green-600">
             <Filter className="w-5 h-5" />
             <span>Filters</span>
           </CardTitle>
-          <Button variant="ghost" size="sm" onClick={resetFilters} className="hover:bg-eco-green/10 text-eco-green">
+          <Button variant="ghost" size="sm" onClick={resetFilters} className="hover:bg-green-600/10 text-green-600">
             <RotateCcw className="w-4 h-4 mr-1" />
             Reset
           </Button>
@@ -45,9 +45,9 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFilters
       </CardHeader>
       <CardContent className="space-y-6 p-6">
         <div>
-          <label className="text-sm font-semibold mb-3 block text-eco-green">Sort By</label>
+          <label className="text-sm font-semibold mb-3 block text-green-600">Sort By</label>
           <Select value={filters.sortBy} onValueChange={(value: any) => updateFilter('sortBy', value)}>
-            <SelectTrigger className="border-2 border-eco-green/20 focus:border-eco-green rounded-xl">
+            <SelectTrigger className="border-2 border-green-600/20 focus:border-green-600 rounded-xl">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -60,12 +60,12 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFilters
           </Select>
         </div>
 
-        <Separator className="bg-eco-green/20" />
+        <Separator className="bg-green-600/20" />
 
         <div>
-          <label className="text-sm font-semibold mb-3 block text-eco-green">Category</label>
+          <label className="text-sm font-semibold mb-3 block text-green-600">Category</label>
           <Select value={filters.category} onValueChange={(value) => updateFilter('category', value)}>
-            <SelectTrigger className="border-2 border-eco-green/20 focus:border-eco-green rounded-xl">
+            <SelectTrigger className="border-2 border-green-600/20 focus:border-green-600 rounded-xl">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -77,9 +77,9 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFilters
         </div>
 
         <div>
-          <label className="text-sm font-semibold mb-3 block text-eco-green">Brand</label>
+          <label className="text-sm font-semibold mb-3 block text-green-600">Brand</label>
           <Select value={filters.brand} onValueChange={(value) => updateFilter('brand', value)}>
-            <SelectTrigger className="border-2 border-eco-green/20 focus:border-eco-green rounded-xl">
+            <SelectTrigger className="border-2 border-green-600/20 focus:border-green-600 rounded-xl">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -91,7 +91,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFilters
         </div>
 
         <div>
-          <label className="text-sm font-semibold mb-3 block text-eco-green">
+          <label className="text-sm font-semibold mb-3 block text-green-600">
             Price Range: ${filters.priceRange[0]} - ${filters.priceRange[1]}
           </label>
           <div className="px-2">
@@ -101,13 +101,13 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFilters
               max={200}
               min={0}
               step={5}
-              className="w-full [&_[role=slider]]:bg-eco-green [&_[role=slider]]:border-eco-green"
+              className="w-full [&_[role=slider]]:bg-green-600 [&_[role=slider]]:border-green-600"
             />
           </div>
         </div>
 
         <div>
-          <label className="text-sm font-semibold mb-3 block text-eco-green">
+          <label className="text-sm font-semibold mb-3 block text-green-600">
             Min Eco Score: {filters.ecoScore}
           </label>
           <div className="px-2">
@@ -117,7 +117,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFilters
               max={100}
               min={0}
               step={5}
-              className="w-full [&_[role=slider]]:bg-eco-green [&_[role=slider]]:border-eco-green"
+              className="w-full [&_[role=slider]]:bg-green-600 [&_[role=slider]]:border-green-600"
             />
           </div>
         </div>
