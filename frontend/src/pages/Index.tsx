@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <div className="min-h-screen w-full">
       <NavigationHeader />
-      <main className="w-full pt-20">
+      <main >
         <HeroSection />
         <div id="features">
           <FeaturesSection />

@@ -8,8 +8,9 @@ import NotFound from "./pages/NotFound";
 import Product from "./pages/Product";
 import { CartProvider } from "./contexts/CartContext"; 
 import ProductDetails from "./pages/ProductDetails";
+import Rewards from "./pages/Rewards";
 const queryClient = new QueryClient();
-
+import Profile from "./pages/Profile"
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -21,6 +22,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/product" element={<Product />} />
              <Route path="/product/:id" element={<ProductDetails />} />
+             <Route path="/rewards" element={<Rewards />} />
+             <Route path="/profile" element={<Profile />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

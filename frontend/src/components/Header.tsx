@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
-import { ShoppingCart, Search, MessageCircle, Leaf } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useCart } from '../contexts/CartContext';
-import { CartDrawer } from './CartDrawer';
-import { AIChat } from './AIChat';
-import { Link } from 'react-router-dom';
-import { Product } from '../types/product';
+import React, { useState } from "react";
+import { ShoppingCart, Search, MessageCircle, Leaf } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useCart } from "../contexts/CartContext";
+import { CartDrawer } from "./CartDrawer";
+import { AIChat } from "./AIChat";
+import { Link } from "react-router-dom";
+import { Product } from "../types/product";
+import { Home, Gift, User, Box } from "lucide-react";
 
 interface HeaderProps {
   searchTerm: string;
   onSearchChange: (term: string) => void;
   allProducts: Product[];
   conversationHistory: Record<string, any>;
-  setConversationHistory: React.Dispatch<React.SetStateAction<Record<string, any>>>;
+  setConversationHistory: React.Dispatch<
+    React.SetStateAction<Record<string, any>>
+  >;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -21,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({
   onSearchChange,
   allProducts,
   conversationHistory,
-  setConversationHistory
+  setConversationHistory,
 }) => {
   const { getTotalItems } = useCart();
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -55,7 +58,24 @@ export const Header: React.FC<HeaderProps> = ({
               />
             </div>
           </div>
-
+          <Link
+            to="/"
+            className="flex items-center gap-2 text-foreground hover:text-green-600 transition-colors font-medium"
+          >
+            <Home className="h-4 w-4" />
+            <span>Home</span>
+          </Link>
+          <Link
+            to="/product"
+            className="flex items-center gap-2 text-foreground hover:text-green-600 transition-colors font-medium"
+          ></Link>
+          <Link
+              to="/rewards"
+              className="flex items-center gap-2 text-foreground hover:text-green-600 transition-colors font-medium"
+            >
+              <Gift className="h-4 w-4" />
+              <span>Rewards</span>
+            </Link>
           <div className="flex items-center space-x-3">
             <Button
               variant="ghost"

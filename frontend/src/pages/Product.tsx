@@ -58,6 +58,7 @@ const Products: React.FC = () => {
   };
 
   return (
+    
     <div className="min-h-screen bg-eco-gradient-soft">
       <Header
         searchTerm={searchTerm}
