@@ -1,6 +1,6 @@
-
 import React from 'react';
-import { X, Plus, MessageCircle } from 'lucide-react';
+import { X, Plus } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { useCart } from '../contexts/CartContext';
@@ -13,6 +13,12 @@ interface CartDrawerProps {
 export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
   const { items, removeFromCart, updateQuantity, getTotalPrice, clearCart } = useCart();
   const totalPrice = getTotalPrice();
+  const navigate = useNavigate();
+
+  const handleGoToCart = () => {
+    onClose(); // Close drawer first
+    navigate('/cart');
+  };
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
@@ -81,8 +87,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-lg font-semibold">Total: ${totalPrice.toFixed(2)}</span>
                 </div>
-                <Button className="w-full bg-green-600 hover:bg-green-700" size="lg">
-                  Checkout
+                <Button
+                  className="w-full bg-green-600 hover:bg-green-700"
+                  size="lg"
+                  onClick={handleGoToCart}
+                >
+                  Go to Cart
                 </Button>
               </div>
             </>
